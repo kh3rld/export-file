@@ -3,7 +3,6 @@ package stylize
 import (
 	"fmt"
 	"net/http"
-	"time"
 
 	send "stylize/utils"
 )
@@ -35,10 +34,8 @@ func Download(w http.ResponseWriter, r *http.Request) {
 	} else {
 		asciiArt = writeAscii(w, banner, text)
 	}
-	currentYear := time.Now().Year()
 
-	cr := fmt.Sprintf("© %d By Doreen [github.com/Doreen-Onyango], Hussein [github.com/kherldhussein], Tomlee [github.com/Tomlee-abila]. All rights reserved.\n\n", currentYear)
 	w.Header().Set("Content-Disposition", "attachment; filename=ascii_art.txt")
 	w.Header().Set("Content-Type", "text/plain")
-	w.Write([]byte(cr + asciiArt))
+	w.Write([]byte(asciiArt))
 }

@@ -53,7 +53,7 @@ go test -v
 2. Start the server with the above usage command and run the below command to test the program's download functionality
 
 ```bash
-curl -X POST -d "Text=Hello World&Banner=standard" -o hello.txt http://localhost:8081/ascii-art/download
+curl -X POST -d "Text=Hello World&Banner=standard" -o hello.txt http://localhost:8080/ascii-art/download
 ```
 
 3. Use the below command to see the content of your downloaded file

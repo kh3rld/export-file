@@ -16,7 +16,7 @@ This program is written purely in [Go](https://go.dev) language for the backend,
 1. Clone the repository:
 
     ```bash
-    git clone https://learn.zone01kisumu.ke/git/khahussein/export-file.git
+    git clone https://learn.zone01kisumu.ke/git/khahussein/ascii-art-web-export-file
     ```
 
 2. Navigate to the project directory:

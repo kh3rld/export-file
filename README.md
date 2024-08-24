@@ -1,6 +1,6 @@
-# ASCII Art Web Stylize
+# ASCII Art Web Export File
 
-This is a program that generates ASCII art based on a given string and banner style specified. The program uses a web interface that is appealing, intuitive and user friendly to displays the results. 
+This is a program that generates ASCII art based on a given string and banner style specified. The program uses a web interface that is appealing, intuitive and user friendly to displays the results. The primary focus for this project specifically is to export/download the result into a file.
 
 ## Features
 
@@ -16,13 +16,13 @@ This program is written purely in [Go](https://go.dev) language for the backend,
 1. Clone the repository:
 
     ```bash
-    git clone https://learn.zone01kisumu.ke/git/khahussein/ascii-art-web.git
+    git clone https://learn.zone01kisumu.ke/git/khahussein/ascii-art-web-export-file
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd ascii-art-web-stylize/cmd/
+    cd ascii-art-web-export-file/cmd/
     ```
 
 ## Usage
@@ -50,11 +50,18 @@ To test the functions, you can go two ways;
 go test -v
 ```
 
-2. Start the server with the above usage command and run the below command to test the program's functionality
+2. Start the server with the above usage command and run the below command to test the program's download functionality
 
 ```bash
-curl -X POST -d "Text=Hello World&Banner=standard" http://localhost:8080/ascii-art
+curl -X POST -d "Text=Hello World&Banner=standard" -o hello.txt http://localhost:8080/ascii-art/download
 ```
+
+3. Use the below command to see the content of your downloaded file
+
+```bash
+cat hello.txt
+```
+
 Expected Output:
 ```
  _    _          _   _                __          __                 _       _  
